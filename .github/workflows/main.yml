@@ -26,5 +26,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: docker build 
         run: |
-          docker build ./ -t 11819551/catnip
+          docker build ./predict/ -t 11819551/catnip
 
