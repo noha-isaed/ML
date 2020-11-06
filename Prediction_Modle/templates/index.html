@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web</title>
+<script></script>
+<style >
+#container{width:1000px; height:500px;display: flex;flex-direction: column;margin: 10px;}
+.logo{width: 1000px;height: 500px; display: flex; justify-content: center;background: linear-gradient(120deg,#d8b5a8,#2c2929,#d8b5a8);; }
+#section1 {background-color: white;  width:400px;height: 290px ;margin: 10px;margin-top: 100px;}
+</style>
+</head>
+
+<body>
+	<center>
+    <div class ="container">
+         <div class="logo">
+	        <div id="section1">
+                 <fieldset>
+                  <form  action="/predict" method="POST" >
+                      <br>
+                     <label>Feature1</label>   
+                     <input type="text" name="Feature[]" required><br><br>
+                     <label>Feature2</label>   
+                     <input type="text" name="Feature[]" required><br><br>
+                     <label>Feature3</label>   
+                     <input type="text" name="Feature[]" required><br><br>
+                     <label>Feature4</label>   
+                     <input type="text" name="Feature[]" required><br><br>
+                     <label>Feature5</label>   
+                     <input type="text" name="Feature[]" required><br><br>
+                     <label>Feature6</label>   
+                     <input type="text" name="Feature[]" required><br><br>
+
+                     <button type="submit">submit</button>
+                  </form>
+                 </fieldset>
+
+
+
+</div>
+
+	 </div>
+</div>
+</body>
+</html>

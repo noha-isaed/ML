@@ -1,0 +1,12 @@
+FROM python:3.6-slim
+
+WORKDIR  Machine_learning-master/predict
+
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "./predict_price.py","-n" ,"model.sav"]
+
