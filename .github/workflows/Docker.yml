@@ -35,6 +35,11 @@ jobs:
         run: |
           docker build ./predict/ -t 11819551/catnip
           
+      # push to docker hub 
+      - name: docker push
+        run: |
+          docker push 11819551/catnip
+          
           
 
 
