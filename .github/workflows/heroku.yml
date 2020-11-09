@@ -20,17 +20,12 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
+      - run: |
+          docker build -t 11819551/catnip .
       - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "heroku-action" #Must be unique in Heroku
-          heroku_email:  "noha.thaher@stu.najah.edu"
-          usedocker: true
-          docker_build_args: |
-            NODE_ENV
-        env:
-          NODE_ENV: "./predict"
-
-          
+          heroku_email:  "noha.thaher@stu.najah.edu"          
 
 
