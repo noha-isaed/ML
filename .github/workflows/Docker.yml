@@ -31,7 +31,7 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
           
  # deploy heroku
-  deploy heroku:
+  deploy_heroku:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
