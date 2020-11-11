@@ -1,5 +1,6 @@
 # This is a basic workflow to help you get started with Actions
-
+ # deploy heroku
+ 
 name: deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -22,4 +23,5 @@ jobs:
           heroku_app_name: "heroku-action" #Must be unique in Heroku
           heroku_email: "noha.thaher@stu.najah.edu"
           usedocker: 1
-          dontuseforce: 1
+          dontuseforce: 1 
+         
