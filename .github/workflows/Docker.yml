@@ -30,16 +30,10 @@ jobs:
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
           
-      # Runs a single command using the runners shell
-      - name: docker build 
-        run: |
-          docker build ./predict/ -t 11819551/catnip
-          
-      # push to docker hub 
-      - name: docker push
-        run: |
-          docker push 11819551/catnip
-
+ # deploy heroku
+  deploy heroku:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.6.8 #This is the action
         with:
@@ -47,7 +41,9 @@ jobs:
           heroku_app_name: "heroku-action" #Must be unique in Heroku
           heroku_email: "noha.thaher@stu.najah.edu"
           usedocker: 1
-          dontuseforce: 1        
+          dontuseforce: 1 
+         
+        
 
 
 
